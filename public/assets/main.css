@@ -1,0 +1,150 @@
+:root {
+    --pink: #eb3690;
+    --dark-pink: #cc126f;
+
+    --alpha-pink-50:#eb36907F;
+    --alpha-pink-25:#eb36903F;
+    --alpha-pink-12:#eb36901F;
+    --alpha-pink-07:#eb369007;
+}
+
+.text-pink {
+    color: var(--pink) !important;
+}
+
+.bg-pink {
+    background-color: var(--dark-pink) !important;
+    border-color: var(--dark-pink) !important;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.card {
+    width: 100%;
+    align-self: baseline;
+    box-shadow: 0 1rem 19rem var(--alpha-pink-12)!important;
+    border-color: var(--alpha-pink-25);
+    z-index: 0;
+}
+.card-body button {
+    margin-top: 0 !important;
+    width: 100%;
+}
+.card-body form {
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
+}
+
+.card-body .url {
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.card-body .url::-webkit-scrollbar {
+    height: 0;
+}
+.card-footer {
+    justify-content: space-between;
+}
+.card-footer i {
+    display: none;
+}
+
+.card-footer.bg-pink {
+    cursor: pointer;
+}
+.card-footer.bg-pink i {
+    display: initial;
+}
+
+@media only screen and (min-width: 768px) {
+    .card {
+        width: 75%;
+        align-self: center;
+    }
+    .card-body button {
+        margin-top: 1rem !important;
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .card {
+        width: 50%;
+    }
+
+    .alert {
+        width: 25%;
+        top: 14px;
+    }
+}
+
+/* Overwrite Bootstrap Classes */
+
+.alert-primary {
+    color: var(--pink);
+    background-color: var(--alpha-pink-25);
+    border-color: var(--alpha-pink-50);
+    backdrop-filter: blur(5px);
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: var(--pink);
+    outline: 0;
+    box-shadow: 0 0 0 .25rem var(--alpha-pink-25)
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--pink);
+    border-color: var(--pink);
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--dark-pink);
+    border-color: var(--dark-pink);
+}
+
+.btn-check:focus+.btn-primary,
+.btn-primary:focus {
+    color: #fff;
+    background-color: var(--dark-pink);
+    border-color: var(--dark-pink);
+    box-shadow: 0 0 0 .25rem var(--alpha-pink-50);
+}
+
+.btn-check:active+.btn-primary,
+.btn-check:checked+.btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: var(--dark-pink);
+    border-color: var(--dark-pink);
+}
+
+.btn-check:active+.btn-primary:focus,
+.btn-check:checked+.btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .25rem var(--alpha-pink-50);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: #fff;
+    background-color: var(--dark-pink);
+    border-color: var(--dark-pink);
+}
