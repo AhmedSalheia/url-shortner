@@ -15,7 +15,7 @@ class ShortenerController extends Controller
     {
         $url = request('link');
         if (!(str_starts_with($url, 'https://') || str_starts_with($url, 'http://') ))
-            $url = 'http://' + trim(trim($url,'/?&:'));
+            $url = 'http://' . trim(trim($url,'/?&:'));
 
         $url = Url::firstOrCreate(
             ['url'=>$url],
